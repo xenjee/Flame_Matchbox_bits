@@ -1,0 +1,40 @@
+<ShaderNodePreset SupportsAdaptiveDegradation="False" SupportsAction="False" SupportsTransition="False" SupportsTimeline="False" TimelineUseBack="False" MatteProvider="False" CommercialUsePermitted="True" ShaderType="Matchbox" SoftwareVersion="2016.0.0" LimitInputsToTexture="True" Version="1" Description="" Name="sg_medianXs">
+	
+   <Shader OutputBitDepth="Output" Index="1">
+      <Uniform Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" IconType="None" Type="vec2" DisplayName="Size" Name="Tinvsize">
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="2.0"></SubUniform>
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="2.0"></SubUniform></Uniform>
+      <Uniform Index="0" NoInput="Error" Tooltip="" DisplayName="src" InputColor="85, 35, 00" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="src"></Uniform>
+   </Shader>
+   
+
+   <Shader OutputBitDepth="Output" Index="2">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.1" Inc="0.001" Tooltip="" Row="2" Col="0" Page="0" Type="float" DisplayName="angle2" Name="rotation"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass1"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="3">
+      <Uniform Type="vec2" DisplayName="Tinvsize" Name="Tinvsize"><Duplicate></Duplicate></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass2"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="4">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.1" Inc="0.001" Tooltip="" Row="3" Col="0" Page="0" Type="float" DisplayName="angle3" Name="rotation2"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass3"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="5">
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass4"></Uniform>
+      <Uniform Type="vec2" DisplayName="Tinvsize" Name="Tinvsize"><Duplicate></Duplicate></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="6">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="-0.2" Inc="0.001" Tooltip="" Row="4" Col="0" Page="0" Type="float" DisplayName="- Angles sum" Name="rotationback"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass5"></Uniform>
+   </Shader>
+   
+   <Page Name="Page 1" Page="0">
+      <Col Name="median X Simplified" Col="0" Page="0">
+      </Col>
+   </Page>
+</ShaderNodePreset>

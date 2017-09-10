@@ -1,0 +1,20 @@
+<ShaderNodePreset SupportsAdaptiveDegradation="False" SupportsAction="False" SupportsTransition="False" SupportsTimeline="False" TimelineUseBack="False" MatteProvider="False" CommercialUsePermitted="True" ShaderType="Matchbox" SoftwareVersion="2016.0.0" LimitInputsToTexture="True" Version="1" Description="" Name="Mult and Div">
+   <Shader OutputBitDepth="Output" Index="1">
+	   
+      <Uniform Index="0" NoInput="Error" Tooltip="" DisplayName="Front" InputColor="80, 30, 00" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="Front"></Uniform>
+      <Uniform Index="1" NoInput="Error" Tooltip="" DisplayName="Matte" InputColor="00, 55, 80" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="Matte"></Uniform>
+	  
+	  <Uniform Row="0" Col="0" Page="0" Default="False" Tooltip="" Type="bool" DisplayName="divide" Name="divide"></Uniform>
+      <Uniform Row="0" Col="2" Page="0" Default="False" Tooltip="" Type="bool" DisplayName="swap inputs" Name="swap"></Uniform>
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0" Inc="0.01" Tooltip="" Row="0" Col="1" Page="0" Type="float" DisplayName="factor" Name="factor"></Uniform>
+      <Uniform Row="0" Col="3" Page="0" Default="False" Tooltip="" Type="bool" DisplayName="bypass" Name="bypass"></Uniform>
+	  
+   </Shader>
+   
+   <Page Name="Page 1" Page="0">
+      <Col Name="Multiply or ..." Col="0" Page="0"></Col>
+	  <Col Name="Opacity" Col="1" Page="0"></Col>
+	  <Col Name="Mux Delux" Col="3" Page="0"></Col>
+	  <Col Name="Just in case" Col="2" Page="0"></Col>	  
+   </Page>
+</ShaderNodePreset>

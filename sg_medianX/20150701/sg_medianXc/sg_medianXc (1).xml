@@ -1,0 +1,55 @@
+<ShaderNodePreset SupportsAdaptiveDegradation="False" SupportsAction="False" SupportsTransition="False" SupportsTimeline="False" TimelineUseBack="False" MatteProvider="False" CommercialUsePermitted="True" ShaderType="Matchbox" SoftwareVersion="2016.0.0" LimitInputsToTexture="True" Version="1" Description="" Name="sg_medianXc">
+	
+   <Shader OutputBitDepth="Output" Index="1">
+      <Uniform Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" IconType="None" Type="vec2" DisplayName="Size" Name="Tinvsize">
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform>
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform></Uniform>	  
+		 
+      <Uniform Index="0" NoInput="Error" Tooltip="" DisplayName="src" InputColor="85, 35, 00" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="src"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="2">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.1" Inc="0.01" Tooltip="" Row="2" Col="1" Page="0" Type="float" DisplayName="Angle 1" Name="rotation"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass1"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="3">
+      <Uniform Inc="0.01" Tooltip="" Row="0" Col="1" Page="0" IconType="None" Type="vec2" DisplayName="Size2" Name="Tinvsize2">
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform>
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass2"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="4">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.1" Inc="0.01" Tooltip="" Row="2" Col="2" Page="0" Type="float" DisplayName="Angle 2" Name="rotation2"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass3"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="5">
+      <Uniform Inc="0.01" Tooltip="" Row="0" Col="2" Page="0" IconType="None" Type="vec2" DisplayName="Size3" Name="Tinvsize3">
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform>
+         <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0"></SubUniform></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass4"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="6">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="-0.2" Inc="0.01" Tooltip="" Row="2" Col="3" Page="0" Type="float" DisplayName="Rotate Back" Name="rotationback"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass5"></Uniform>
+
+	        <Uniform Inc="0.01" Tooltip="" Row="3" Col="1" Page="0" DisplayName="Center" IconType="Pick" Type="vec2" Name="center">
+	           <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.5"></SubUniform>
+	           <SubUniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.5"></SubUniform></Uniform>
+
+   </Shader>
+   
+   <Page Name="Page 1" Page="0">
+      <Col Name="Pass 1" Col="0" Page="0">
+      </Col>
+      <Col Name="Pass 2" Col="1" Page="0">
+      </Col>
+      <Col Name="Pass 3" Col="2" Page="0">
+      </Col>
+      <Col Name="Pass 4" Col="3" Page="0">
+      </Col>
+   </Page>
+</ShaderNodePreset>

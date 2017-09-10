@@ -1,0 +1,50 @@
+<ShaderNodePreset SupportsAdaptiveDegradation="False" SupportsAction="False" SupportsTransition="False" SupportsTimeline="False" TimelineUseBack="False" MatteProvider="False" CommercialUsePermitted="True" ShaderType="Matchbox" SoftwareVersion="2016.0.0" LimitInputsToTexture="True" Version="1" Description="" Name="sg_bandpass_to_diff">
+	
+   <Shader OutputBitDepth="Output" Index="1">
+      <Uniform Index="0" NoInput="Error" Tooltip="" DisplayName="frontt" InputColor="85, 35, 00" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="frontt"></Uniform>
+   </Shader>
+   
+   
+   
+   <Shader OutputBitDepth="Output" Index="2">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="7.5" Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" Type="float" DisplayName="low |--| mid" Name="lowfreqlimit"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass1"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="3">
+      <Uniform Type="float" DisplayName="lowfreqlimit" Name="lowfreqlimit"><Duplicate></Duplicate></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass2"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="4">
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="2.2" Inc="0.01" Tooltip="" Row="1" Col="0" Page="0" Type="float" DisplayName="mid |--| high" Name="midfreqlimit"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass1"></Uniform>
+   </Shader>
+   
+   <Shader OutputBitDepth="Output" Index="5">
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass3"></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass4"></Uniform>
+	  
+      <Uniform Row="2" Col="2" Page="0" Default="True" Tooltip="" Type="bool" DisplayName="high on/off" Name="outputhigh"></Uniform>
+      <Uniform Row="0" Col="2" Page="0" Default="True" Tooltip="" Type="bool" DisplayName="low on/off" Name="outputlow"></Uniform>
+	  
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0" Inc="0.01" Tooltip="" Row="2" Col="1" Page="0" Type="float" DisplayName="gain high" Name="gainhigh"></Uniform>
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="1.0" Inc="0.01" Tooltip="" Row="0" Col="1" Page="0" Type="float" DisplayName="gain low" Name="gainlow"></Uniform>
+      <Uniform ResDependent="None" Max="1000000.0" Min="-1000000.0" Default="0.2" Inc="0.01" Tooltip="" Row="1" Col="1" Page="0" Type="float" DisplayName="gain mid" Name="gainmid"></Uniform>
+
+      <Uniform Row="1" Col="2" Page="0" Default="True" Tooltip="" Type="bool" DisplayName="mid on/off" Name="outputmid"></Uniform>
+      <Uniform Type="float" DisplayName="midfreqlimit" Name="midfreqlimit"><Duplicate></Duplicate></Uniform>
+      <Uniform InputColor="67, 77, 83" Mipmaps="False" GL_TEXTURE_WRAP_T="GL_CLAMP_TO_EDGE" GL_TEXTURE_WRAP_S="GL_CLAMP_TO_EDGE" GL_TEXTURE_MAG_FILTER="GL_LINEAR" GL_TEXTURE_MIN_FILTER="GL_LINEAR" Type="sampler2D" Name="adsk_results_pass1"></Uniform>
+   </Shader>
+   
+   
+   
+   <Page Name="Page 1" Page="0">
+      <Col Name="Boundaries" Col="0" Page="0">
+      </Col>
+      <Col Name="Gain" Col="1" Page="0">
+      </Col>
+	  <Col Name="Switcher" Col="2" Page="0">
+	  </Col>
+   </Page>
+</ShaderNodePreset>
